@@ -6,8 +6,6 @@
 #SBATCH --partition=thin
 #SBATCH -t 2-00:00:00
 
-module load 2021
-
 SEQDB="${1}"
 DB="${2}"
 
@@ -22,6 +20,7 @@ fi
 
 MMSEQS='/gpfs/work2/0/lwc2020006/alpaca/software/miniconda3/envs/mmseqs2_v14/bin/mmseqs'
 
+mkdir -p results
 RESDB=results/$(basename ${SEQDB})_$(basename ${DB})
 
 "${MMSEQS}" search ${SEQDB} ${DB} $RESDB $TMPDIR -e 0.001 -s 9 --remove-tmp-files 1 --threads $SLURM_NTASKS --split-memory-limit $(expr $(expr ${SLURM_NTASKS} \* 2) - 16 )"G"
