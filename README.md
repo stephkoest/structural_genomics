@@ -67,6 +67,17 @@ to be done
 7. [bin](https://github.com/stephkoest/structural_genomics/tree/main/01_clustering/bin)
    - A directory that potentially contains additional binaries or scripts used in the clustering process.
 
+### 02_esmfold
+
+1. [01_submit_ESMfold.sh](https://github.com/stephkoest/structural_genomics/blob/main/02_esmfold/01_submit_ESMfold.sh)
+   - This script submits ESMfold jobs to a cluster. It processes input protein sequence files and splits them into smaller chunks, then submits these chunks as separate jobs for ESMfold prediction.
+
+2. [02_sum_ESMfold.sh](https://github.com/stephkoest/structural_genomics/blob/main/02_esmfold/02_sum_ESMfold.sh)
+   - This script summarizes the results of ESMfold predictions by calculating the average plDDT score for each protein structure.
+
+3. [03_generate_colabfold_input.sh](https://github.com/stephkoest/structural_genomics/blob/main/02_esmfold/03_generate_colabfold_input.sh)
+   - This script generates input files for ColabFold based on the summarized ESMfold results. It filters sequences with an average plDDT score below a certain threshold and prepares them for further analysis.
+
 ## Contributors
 
 - [Stephan Koestlbacher](https://github.com/stephkoest)
