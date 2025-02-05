@@ -64,9 +64,6 @@ to be done
 6. [06_hhsearch_COG.sh](https://github.com/stephkoest/structural_genomics/blob/main/01_clustering/06_hhsearch_COG.sh)
    - This script performs an HHsearch against the COG database to annotate the clusters.
 
-7. [bin](https://github.com/stephkoest/structural_genomics/tree/main/01_clustering/bin)
-   - A directory that potentially contains additional binaries or scripts used in the clustering process.
-
 ### 02_esmfold
 
 1. [01_submit_ESMfold.sh](https://github.com/stephkoest/structural_genomics/blob/main/02_esmfold/01_submit_ESMfold.sh)
@@ -77,6 +74,14 @@ to be done
 
 3. [03_generate_colabfold_input.sh](https://github.com/stephkoest/structural_genomics/blob/main/02_esmfold/03_generate_colabfold_input.sh)
    - This script generates input files for ColabFold based on the summarized ESMfold results. It filters sequences with an average plDDT score below a certain threshold and prepares them for further analysis.
+
+### 03_genetic_search
+
+1. [01_create_chunks.sh](https://github.com/stephkoest/structural_genomics/blob/main/03_genetic_search/01_create_chunks.sh)
+   - This script processes input protein sequence files, categorizes them based on sequence length, and creates compressed chunks for further analysis.
+
+2. [02_submitSearch.sh](https://github.com/stephkoest/structural_genomics/blob/main/03_genetic_search/02_submitSearch.sh)
+   - This script submits genetic search jobs to a cluster, utilizing MMseqs2 for sequence alignment and searching against predefined databases. It also manages result packaging and compression.
 
 ## Contributors
 
