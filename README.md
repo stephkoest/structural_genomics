@@ -85,7 +85,7 @@ to be done
 
 ## Contributors
 
-- [Stephan Koestlbacher](https://github.com/stephkoest)
+- [Stephan Köstlbacher](https://github.com/stephkoest)
 
 ## License
 
