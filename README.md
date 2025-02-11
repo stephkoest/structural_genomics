@@ -83,6 +83,62 @@ to be done
 2. [02_submitSearch.sh](https://github.com/stephkoest/structural_genomics/blob/main/03_genetic_search/02_submitSearch.sh)
    - This script submits genetic search jobs to a cluster, utilizing MMseqs2 for sequence alignment and searching against predefined databases. It also manages result packaging and compression.
 
+
+### 04_prediction
+
+01_prepareQueries.sh
+
+Prepares queries for prediction by extracting and processing input files.
+Activates the required Conda environment and runs colabfold_split_msas to generate MSA files.
+02_submit_prediction.sh
+
+Submits prediction jobs to a SLURM scheduler.
+Activates the required Conda environment and runs colabfold_batch for predictions.
+03_sum_predictions.sh
+
+Summarizes prediction results by extracting and processing prediction logs and PDB files.
+Calculates average pLDDT scores for predicted structures and selects the best structures.
+04_select_leftovers.sh
+
+Identifies and selects sequences that were not successfully predicted.
+Prepares a list of missing sequences for further processing or prediction attempts.
+
+## 04_prediction
+
+1. [01_prepareQueries.sh](https://github.com/stephkoest/structural_genomics/blob/main/04_prediction/01_prepareQueries.sh)
+   - Prepares queries for prediction by extracting and processing input files.
+   - Activates the required Conda environment and runs `colabfold_split_msas` to generate MSA files.
+
+2. [02_submit_prediction.sh](https://github.com/stephkoest/structural_genomics/blob/main/04_prediction/02_submit_prediction.sh)
+   - Submits prediction jobs to a SLURM scheduler.
+   - Activates the required Conda environment and runs `colabfold_batch` for predictions.
+
+3. [03_sum_predictions.sh](https://github.com/stephkoest/structural_genomics/blob/main/04_prediction/03_sum_predictions.sh)
+   - Summarizes prediction results by extracting and processing prediction logs and PDB files.
+   - Calculates average pLDDT scores for predicted structures and selects the best structures.
+
+4. [04_select_leftovers.sh](https://github.com/stephkoest/structural_genomics/blob/main/04_prediction/04_select_leftovers.sh)
+   - Identifies and selects sequences that were not successfully predicted.
+   - Prepares a list of missing sequences for further processing or prediction attempts.
+
+### 05_structure_search
+
+1. [00_prepare_db.sh](https://github.com/stephkoest/structural_genomics/blob/main/05_structure_search/00_prepare_db.sh)
+   - Creates necessary directories (data, results, log).
+   - Activates the foldseek Conda environment.
+   - Prepares a database from PDB files located in ../04_prediction/results/Asgard_best_structures/.
+     
+2. [01_submit_foldseek.sh](https://github.com/stephkoest/structural_genomics/blob/main/05_structure_search/01_submit_foldseek.sh)
+   - Configures a SLURM job for structure search.
+   - Activates the foldseek Conda environment.
+   - Iterates over multiple databases to perform foldseek searches and converts alignments to m8 format.
+   - Outputs results to the results directory.
+
+3. [03_cluster_CIPS.sh](https://github.com/stephkoest/structural_genomics/blob/main/05_structure_search/03_cluster_CIPS.sh)
+   - Activates the foldseek environment (commented out in the script).
+   - Performs foldseek search on the Asgard database against itself.
+   - Generates TSV files for alignments and clusters, storing results in the results directory.
+
 ## Contributors
 
 - [Stephan Köstlbacher](https://github.com/stephkoest)
