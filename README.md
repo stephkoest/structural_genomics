@@ -30,6 +30,12 @@ To set up the necessary conda environments, run:
 
 ```bash
 conda install -n mmseqs2_v14 -c bioconda mmseqs2::14.7e284
+conda install -n foldseek -c biocondafoldseek::6.29e2557::pl5321hb365157_2
+#colabfold has to be installed via pip
+conda create -n colabfold
+conda activate colabfold
+pip install alphafold-colabfold::2.1.16
+conda deactivate
 ```
 
 ### Other Software
