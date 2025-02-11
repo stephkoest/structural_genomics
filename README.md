@@ -86,25 +86,6 @@ to be done
 
 ### 04_prediction
 
-01_prepareQueries.sh
-
-Prepares queries for prediction by extracting and processing input files.
-Activates the required Conda environment and runs colabfold_split_msas to generate MSA files.
-02_submit_prediction.sh
-
-Submits prediction jobs to a SLURM scheduler.
-Activates the required Conda environment and runs colabfold_batch for predictions.
-03_sum_predictions.sh
-
-Summarizes prediction results by extracting and processing prediction logs and PDB files.
-Calculates average pLDDT scores for predicted structures and selects the best structures.
-04_select_leftovers.sh
-
-Identifies and selects sequences that were not successfully predicted.
-Prepares a list of missing sequences for further processing or prediction attempts.
-
-## 04_prediction
-
 1. [01_prepareQueries.sh](https://github.com/stephkoest/structural_genomics/blob/main/04_prediction/01_prepareQueries.sh)
    - Prepares queries for prediction by extracting and processing input files.
    - Activates the required Conda environment and runs `colabfold_split_msas` to generate MSA files.
@@ -120,6 +101,7 @@ Prepares a list of missing sequences for further processing or prediction attemp
 4. [04_select_leftovers.sh](https://github.com/stephkoest/structural_genomics/blob/main/04_prediction/04_select_leftovers.sh)
    - Identifies and selects sequences that were not successfully predicted.
    - Prepares a list of missing sequences for further processing or prediction attempts.
+
 
 ### 05_structure_search
 
