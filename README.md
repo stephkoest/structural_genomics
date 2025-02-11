@@ -46,7 +46,7 @@ Ensure you have the following software versions:
 
 ## Usage
 
-to be done
+Change into the respective subdirectory and run the scripts in ascending order.
 
 ## Subdirectory Summaries
 
