@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir -p data results
+mkdir -p data results log
 #load foldseek
 conda activate foldseek
 

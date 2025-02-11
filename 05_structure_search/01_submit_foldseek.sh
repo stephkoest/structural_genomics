@@ -6,21 +6,11 @@
 #SBATCH --partition=thin
 #SBATCH -t 5-00:00:00
 
-VMTOUCH=/projects/0/lwc2020006/alpaca/software/vmtouch/vmtouch
-module load 2021
-module load CMake/3.20.1-GCCcore-10.3.0
-module load GCC/10.3.0
-module load parallel/20210622-GCCcore-10.3.0
-
-source /gpfs/work2/0/lwc2020006/alpaca/software/miniconda3/bin/activate
 conda activate foldseek
 
-#export PATH=/projects/0/lwc2020006/alpaca/software/foldseek/bin:$PATH
 
 DB2=data/Asgard_db
 MAXS=10000
-
-mkdir -p results
 
 for file in $(echo ../databases/foldseek/PDB_db  ../databases/foldseek/UniProt50_Alphafold_db  ../databases/foldseek/SwissProt_Alphafold_db);
 do
