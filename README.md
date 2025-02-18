@@ -130,6 +130,7 @@ Change into the respective subdirectory and run the scripts in ascending order.
 ## Contributors
 
 - [Stephan Köstlbacher](https://github.com/stephkoest)
+- [Jolien van Hooff](https://github.com/jolienvanhooff)
 
 ## License
 
