@@ -127,6 +127,12 @@ Change into the respective subdirectory and run the scripts in ascending order.
    - Performs foldseek search on the Asgard database against itself.
    - Generates TSV files for alignments and clusters, storing results in the results directory.
 
+### 06_gene_tree_annotation
+
+1. [generate_input_data_iTol.py](https://github.com/stephkoest/structural_genomics/blob/main/06_gene_tree_annotation/generate_input_data_iTol.py)
+   - Generates datasets to annotate and visualize single gene trees in iTOL
+   - See its [README.md](https://github.com/stephkoest/structural_genomics/blob/main/06_gene_tree_annotation/README.md) for further details
+
 ## Contributors
 
 - [Stephan Köstlbacher](https://github.com/stephkoest)
