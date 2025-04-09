@@ -1,6 +1,7 @@
 # Structural Genomics
 
-Collection of scripts used for analyses in "Structure-based inference of eukaryotic complexity in Asgard archaea."
+Collection of scripts used for analyses in "Inference of eukaryotic complexity in Asgard archaea using structural modeling" by Köstlbacher et al.
+"
 
 ## Table of Contents
 
