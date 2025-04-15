@@ -97,7 +97,7 @@ Change into the respective subdirectory and run the scripts in ascending order.
    - This script processes input protein sequence files, categorizes them based on sequence length, and creates compressed chunks for further analysis.
 
 2. [02_submitSearch.sh](https://github.com/stephkoest/structural_genomics/blob/main/03_genetic_search/02_submitSearch.sh)
-   - This script submits genetic search jobs to a cluster, utilizing MMseqs2 for sequence alignment and searching against predefined databases. It also manages result packaging and compression.
+   - This script submits genetic search jobs to a cluster, utilizing MMseqs2 for sequence alignment and searching against predefined databases. It loads the Colabfold databases into memory, therefore needing a 800+ GB momory computer. It also manages result packaging and compression.
 
 
 ### 04_prediction
