@@ -143,6 +143,10 @@ Change into the respective subdirectory and run the scripts in ascending order.
    - Generates datasets to annotate and visualize single gene trees in iTOL
    - See its [README.md](https://github.com/stephkoest/structural_genomics/blob/main/06_gene_tree_annotation/README.md) for further details
 
+## Data
+All structural annotation results and enrichment outputs are available at:
+Figshare (full datasets; DOI provided upon manuscript acceptance)
+
 ## Contributors
 
 - [Stephan Köstlbacher](https://github.com/stephkoest)
