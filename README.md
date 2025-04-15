@@ -50,7 +50,7 @@ Typical install time: ~5 minutes.
 
 ### Reproducibility
 Due to hardware constraints, we do not yet support full reproduction of all manuscript figures. Homology search for structure prediction was run on nodes 	
-with 2x AMD Rome 7H12 (64 Cores/Socket, 2.6GHz, 280W) and structure prediction was run on nodes with 4x 	
+with 2x AMD Rome 7H12 (1 TiB DRAM, to load the colabfold sequence databases into memory) and structure prediction was run on nodes with 4x 	
 NVIDIA A100 (40 GiB HBM2 memory with 5 active memory stacks per GPU) on the dutch supercomputer Snellius (https://www.surf.nl/en/services/compute/snellius-the-national-supercomputer).
 However, we include all scripts and settings necessary to run the analysis pipeline and generate key summary outputs.
 
