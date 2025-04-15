@@ -10,6 +10,7 @@ Collection of scripts used for analyses in:
 - [Setup](#setup)
 - [Usage](#usage)
 - [Subdirectory Summaries](#subdirectory-summaries)
+- [Data](#data)
 - [Contributors](#contributors)
 - [License](#license)
 
