@@ -38,12 +38,21 @@ conda activate colabfold
 pip install alphafold-colabfold::2.1.16
 conda deactivate
 ```
+Typical install time: ~10 minutes.
 
 ### Other Software
 
 Ensure you have the following software versions:
 
 - MMseqs2 for ColabFold search: fd1837b600c57278bcfb2ac1ac7f024e458c0606
+
+Typical install time: ~5 minutes.
+
+### Reproducibility
+Due to hardware constraints, we do not yet support full reproduction of all manuscript figures. Homology search for structure prediction was run on nodes 	
+with 2x AMD Rome 7H12 (64 Cores/Socket, 2.6GHz, 280W) and structure prediction was run on nodes with 4x 	
+NVIDIA A100 (40 GiB HBM2 memory with 5 active memory stacks per GPU) on the dutch supercomputer Snellius (https://www.surf.nl/en/services/compute/snellius-the-national-supercomputer).
+However, we include all scripts and settings necessary to run the analysis pipeline and generate key summary outputs.
 
 ## Usage
 
