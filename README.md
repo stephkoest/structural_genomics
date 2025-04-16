@@ -144,11 +144,32 @@ Change into the respective subdirectory and run the scripts in ascending order.
    - Performs foldseek search on the Asgard database against itself.
    - Generates TSV files for alignments and clusters, storing results in the results directory.
 
-### 06_gene_tree_annotation
+### 06_euk_enrichment
 
-1. [generate_input_data_iTol.py](https://github.com/stephkoest/structural_genomics/blob/main/06_gene_tree_annotation/generate_input_data_iTol.py)
+1. [00_download_UniRef50xml.sh](https://github.com/stephkoest/structural_genomics/blob/main/06_euk_enrichment/00_download_UniRef50xml.sh)
+   - Downloads the UniRef50 XML file from the UniProt database.  
+   - Saves the file in the `data` directory.
+
+2. [01_run_subselect.sh](https://github.com/stephkoest/structural_genomics/blob/main/06_euk_enrichment/01_run_subselect.sh)
+   - Extracts relevant information from the UniRef50 XML file.  
+   - Generates a long-format TSV file (`uniref50.sub.long.tsv`) for downstream analysis.
+
+3. [02_run_enrichment.sh](https://github.com/stephkoest/structural_genomics/blob/main/06_euk_enrichment/02_run_enrichment.sh)
+   - Runs the enrichment analysis using the `run_euk_enrichment.R` script.  
+   - Requires input files generated in the previous steps and outputs results in the `results` directory.  
+
+4. [bin/makeLong.py](https://github.com/stephkoest/structural_genomics/blob/main/06_euk_enrichment/bin/makeLong.py)
+   - A helper script used in `01_run_subselect.sh` to process UniRef50 data into a long format.  
+
+5. [bin/run_euk_enrichment.R](https://github.com/stephkoest/structural_genomics/blob/main/06_euk_enrichment/bin/run_euk_enrichment.R)
+   - The main R script for performing statistical enrichment analysis.  
+   - Outputs summary tables and adjusted p-values for enrichment results.
+
+### 07_gene_tree_annotation
+
+1. [generate_input_data_iTol.py](https://github.com/stephkoest/structural_genomics/blob/main/07_gene_tree_annotation/generate_input_data_iTol.py)
    - Generates datasets to annotate and visualize single gene trees in iTOL
-   - See its [README.md](https://github.com/stephkoest/structural_genomics/blob/main/06_gene_tree_annotation/README.md) for further details
+   - See its [README.md](https://github.com/stephkoest/structural_genomics/blob/main/07_gene_tree_annotation/README.md) for further details
 
 ## Data
 All structural annotation results and enrichment outputs are available at:
@@ -161,4 +182,4 @@ Figshare (full datasets; DOI provided upon manuscript acceptance)
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
