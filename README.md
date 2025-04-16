@@ -80,6 +80,9 @@ Change into the respective subdirectory and run the scripts in ascending order.
 
 6. [06_hhsearch_COG.sh](https://github.com/stephkoest/structural_genomics/blob/main/01_clustering/06_hhsearch_COG.sh)
    - This script performs an HHsearch against the COG database to annotate the clusters.
+  
+7. [07_get_representatives.sh](https://github.com/stephkoest/structural_genomics/blob/main/01_clustering/07_get_representatives.sh)
+   - This script extract representatives for asCOGs and de novo clusters.
 
 ### 02_esmfold
 
