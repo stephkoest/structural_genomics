@@ -132,8 +132,11 @@ Change into the respective subdirectory and run the scripts in ascending order.
    - Activates the foldseek Conda environment.
    - Iterates over multiple databases to perform foldseek searches and converts alignments to m8 format.
    - Outputs results to the results directory.
+3. [02_get_tophits.sh](https://github.com/stephkoest/structural_genomics/blob/main/05_structure_search/02_get_tophits.sh)
+   - Use bin/best_hits.R script to extraxt non-overlapping best hits per query in both directions.
+   - Outputs results to the results directory.
 
-3. [03_cluster_CIPS.sh](https://github.com/stephkoest/structural_genomics/blob/main/05_structure_search/03_cluster_CIPS.sh)
+4. [03_cluster_CIPS.sh](https://github.com/stephkoest/structural_genomics/blob/main/05_structure_search/03_cluster_CIPS.sh)
    - Activates the foldseek environment (commented out in the script).
    - Performs foldseek search on the Asgard database against itself.
    - Generates TSV files for alignments and clusters, storing results in the results directory.
